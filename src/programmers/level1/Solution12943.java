@@ -9,6 +9,7 @@ public class Solution12943 {
     }
 
     // num이 626331일 때 자꾸 488이 리턴되는데 혹시나 해서 매개변수로 받는 num을 long으로 자료형을 변환했더니 제대로된 값이 출력됨
+    // -> 이유 찾으면 추가
     static int solution(long num) {
         int answer = 0;
 
