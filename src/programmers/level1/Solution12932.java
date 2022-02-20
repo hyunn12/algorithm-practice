@@ -17,6 +17,13 @@ public class Solution12932 {
     public static int[] solution(long n) {
         String temp = Long.toString(n);
 
+        // [ String 형변환 방법 ]
+        //    1. toString
+        //    2. String.valueOf
+        //    3. String s = str + "";
+        // String.valueOf를 사용하면 입력받은 값이 Null 일 경우 값이 "Null"로 넘어옴
+        // toString 사용 시 Null 값이 넘어올 경우 NullPointerException 발생
+
         // 각 자리별로 쪼개기 위해 String으로 변환 이용
         // reverse 이용 위해 String을 split으로 쪼개서 List로 받음
         List<String> list = new ArrayList<>(Arrays.asList(temp.split("")));
@@ -40,6 +47,8 @@ public class Solution12932 {
 
         // 단순 반복문을 통해 각 자리별 숫자를 answer 배열에 담음
         for (int i = 0; i < arr.length; i++) answer[i] = Integer.parseInt(arr[i]);
+
+        //IntStream을 사용하면? -> test autoboxing
 
         return answer;
         /*

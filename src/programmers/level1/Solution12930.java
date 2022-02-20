@@ -9,7 +9,6 @@ public class Solution12930 {
 
     public static String solution(String s) {
         // 공백을 기준으로 단어별 짝 홀 인덱스를 판단
-        // 각 단어별로 -> String.split(" ")??
         // 낱말별로?? -> String.split("")
         // String으로 쪼개서 toUpperCase / toLowerCase
 
@@ -28,11 +27,14 @@ public class Solution12930 {
             }
 
             // idx가 짝수면 대문자로, 홀수면 소문자로 변환해 StringBuilder에 할당
-            if (idx % 2 == 0) {
-                sb.append(str.toUpperCase());
-            } else {
-                sb.append(str.toLowerCase());
-            }
+//            if (idx % 2 == 0) {
+//                sb.append(str.toUpperCase());
+//            } else {
+//                sb.append(str.toLowerCase());
+//            }
+
+            // 삼항연산자로 처리
+            sb.append((idx % 2 == 0) ? str.toUpperCase() : str.toLowerCase());
 
             // 단어 하나의 연산이 끝나면 idx에 1을 더해줌
             idx++;
@@ -48,7 +50,7 @@ public class Solution12930 {
             }
             비슷하게 "" 으로 쪼개서 낱말을 String배열에 담은 것까지는 비슷했지만 String 자체에 += 해준 케이스
             코드는 간결하고 좋지만 String 자체에 연산을 하게되면 매번 새로운 객체가 생성되기때문에 메모리나 속도면에서 좋지 않을거같은데..
-            sb.append로는 삼항연산자를 사용할 방법이 없을까?
+            sb.append로는 삼항연산자를 사용할 방법이 없을까? => append 내에 삼항연산자 할당하면 됨!
          */
     }
 }
