@@ -35,13 +35,13 @@ public class Solution12926 {
         /*
             다른 사람의 풀이
             for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-            if (Character.isLowerCase(ch)) {
-                ch = (char) ((ch - 'a' + n) % 26 + 'a');
-            } else if (Character.isUpperCase(ch)) {
-                ch = (char) ((ch - 'A' + n) % 26 + 'A');
-            }
-            result += ch;
+                char ch = s.charAt(i);
+                if (Character.isLowerCase(ch)) {
+                    ch = (char) ((ch - 'a' + n) % 26 + 'a');
+                } else if (Character.isUpperCase(ch)) {
+                    ch = (char) ((ch - 'A' + n) % 26 + 'A');
+                }
+                result += ch;
             }
 
             % 26을 통해 나머지와 a를 더해서 따로 if문 빼지않고 처리할 수 있도록 처리
