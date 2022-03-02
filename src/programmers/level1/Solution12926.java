@@ -10,6 +10,9 @@ public class Solution12926 {
 
     public static String solution(String s, int n) {
         StringBuffer sb = new StringBuffer();
+        // StringBuffer는 전역변수로
+        // StringBuilder는 지역변수로 선언하는게 유리함
+        // 동기/비동기처리때문에!
 
         s.chars().forEach(c -> {
             // 대문자인 경우 변환처리
