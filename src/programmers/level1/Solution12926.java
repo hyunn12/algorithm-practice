@@ -13,6 +13,8 @@ public class Solution12926 {
         // StringBuffer는 전역변수로
         // StringBuilder는 지역변수로 선언하는게 유리함
         // 동기/비동기처리때문에!
+        // +) 하나의 작업만 처리하는 클래스라면 StringBuffer보단 StringBuilder가 더 빠르다는 말을 봤다
+        //      현재 알고리즘 문제 풀면서 하나의 작업만 처리중이므로 되도록 StringBuilder를 사용해야겠다
 
         s.chars().forEach(c -> {
             // 대문자인 경우 변환처리
