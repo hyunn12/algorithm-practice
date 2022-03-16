@@ -1,7 +1,5 @@
 package programmers.level1;
 
-import java.util.Iterator;
-
 // 소수 찾기 (완전탐색)
 public class Solution12921 {
 
